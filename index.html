@@ -1,22 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"/>
-    <title>Jokenpô Game</title>
-</head>
-<body>
-    <h1>Jokenpô</h1>
-    <button id="reset">Reset</button>
-    <div id="game-board"></div>
-    <h3>Jogador</h3>
-    <h3>Computador</h3>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>JoKenPô Game</title>
+  </head>
+
+  <body>
+    <header><h1>JoKenPô</h1></header>
     
+    <h2>Escolha sua jogada: Pedra, Papel ou Tesoura.</h2>
 
+    <div class="imagem">
+      <img id="escolhaPedra" src="./images/rock.png" alt="Escolha Pedra" />
 
+      <img id="escolhaPapel" src="./images/paper.png" alt="Escolha Papel" />
 
- <script src="./script.js"></script>   
-</body>
+      <img
+        id="escolhaTesoura" src="./images/scissor.png" alt="Escolha Tesoura"/>
+    </div>
+
+    <h3 id="escolhaTelaCpu"></h3>
+
+    <h4 id="vencedor"></h4>
+
+    <!-- <div class="resultado">
+    <p class="resultado"> Jogador venceu!</p>
+    <p class="resultado"> Computador venceu!</p>
+    <p class="resultado"> Empate!</p>
+</div> -->
+
+    <!--<div class="pontuacao">
+    <div id="placarJogador" class="jogador">Jogador</div>
+    <div id="placarComputador" class="jogador">Computador</div>
+    <span id="pontosJogador">0</span>:<span id="pontosComputador">0</span>
+</div> 
+
+<button id="reiniciar">Reiniciar</button>-->
+
+    <script src="./main.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
