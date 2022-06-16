@@ -4,11 +4,11 @@ const escolhaTesoura = document.getElementById('escolhaTesoura');
 const vencedor = document.getElementById('vencedor');
 const escolhaTelaCpu = document.getElementById('escolhaTelaCpu');
 const escolhaJogador = document.getElementById('escolhaJogador');
-//const pontosJogadorSpan = document.getElementById('pontosJogador');
-//const pontosComputadorSpan = document.getElementById('pontosComputador');
-//const pontuacao = document.querySelector('.pontuacao')
-//let pontosJogador = 0;
-//let pontosComputador = 0;
+const pontosJogadorSpan = document.getElementById('pontosJogador');
+const pontosComputadorSpan = document.getElementById('pontosComputador');
+const pontuacao = document.querySelector('.pontuacao');
+let pontosJogador = 0;
+let pontosComputador = 0;
 
 
 
@@ -17,30 +17,38 @@ function checarResposta(escolha){
 
 if (escolha === jogadaCpu){
     vencedor.innerText = "EMPATE!"
+   // placar()
 }
 
 if ( escolha === "Pedra" && jogadaCpu === "Papel"){
     vencedor.innerText = "COMPUTADOR VENCEU!"
+   // placar()
 }
 
 if ( escolha === "Pedra" && jogadaCpu === "Tesoura"){
     vencedor.innerText = "JOGADOR VENCEU!"
+    //placar()
 }
 
 if ( escolha === "Papel" && jogadaCpu === "Pedra"){
     vencedor.innerText = "JOGADOR VENCEU!"
+   // placar() 
 }
 
 if (escolha === "Papel" && jogadaCpu === "Tesoura"){
     vencedor.innerText = "COMPUTADOR VENCEU!"
+    //placar()
 }
 
 if (escolha === "Tesoura" && jogadaCpu === "Pedra"){
     vencedor.innerText = "COMPUTADOR VENCEU!"
+   // placar()
+   
 }
 
 if (escolha === "Tesoura" && jogadaCpu === "Papel"){
     vencedor.innerText = "JOGADOR VENCEU!"
+    //placar()
 }
 
 }
@@ -65,8 +73,13 @@ function jogadaJogador(escolha){
     } 
 }
 
-//function
-
+/*function placar(){
+    if (vencedor === "JOGADOR VENCEU!"){
+        pontosJogadorSpan.innerText = pontosJogador++
+    } else if(vencedor === "COMPUTADOR VENCEU!"){
+        pontosComputadorSpan.innerText = pontosComputador++
+}
+}*/
 
 
 
