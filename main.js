@@ -1,17 +1,19 @@
-const escolhaPedra = document.getElementById('escolhaPedra')
-const escolhaPapel = document.getElementById('escolhaPapel')
-const escolhaTesoura = document.getElementById('escolhaTesoura')
-const vencedor = document.getElementById('vencedor')
-const escolhaTelaCpu = document.getElementById('escolhaTelaCpu')
+const escolhaPedra = document.getElementById('escolhaPedra');
+const escolhaPapel = document.getElementById('escolhaPapel');
+const escolhaTesoura = document.getElementById('escolhaTesoura');
+const vencedor = document.getElementById('vencedor');
+const escolhaTelaCpu = document.getElementById('escolhaTelaCpu');
+const escolhaJogador = document.getElementById('escolhaJogador');
+//const pontosJogadorSpan = document.getElementById('pontosJogador');
+//const pontosComputadorSpan = document.getElementById('pontosComputador');
+//const pontuacao = document.querySelector('.pontuacao')
+//let pontosJogador = 0;
+//let pontosComputador = 0;
 
-//console.log(escolhaPedra)
-//console.log(escolhaPapel)
-//console.log(escolhaTesoura)
+
 
 function checarResposta(escolha){
    const jogadaCpu = jogadaComputador()
-   console.log(escolha)
-   console.log(jogadaCpu)
 
 if (escolha === jogadaCpu){
     vencedor.innerText = "EMPATE!"
@@ -44,22 +46,42 @@ if (escolha === "Tesoura" && jogadaCpu === "Papel"){
 }
 
 function jogadaComputador(){
-   const opcoesComputador = ["Pedra","Papel","Tesoura"];
-   const randomNum = Math.floor(Math.random()*3);
-   escolhaTelaCpu.innerText = `A escolha do computador foi ${opcoesComputador[randomNum]}.`;
-
+   const opcoesComputador = ["Pedra", "Papel", "Tesoura"];
+   const randomNum = Math.floor(Math.random(opcoesComputador)*3);
+   escolhaTelaCpu.innerText = `Computador: ${opcoesComputador[randomNum]}.`;
+   
   return opcoesComputador[randomNum];
 }
+
+function jogadaJogador(escolha){
+    if (escolha === 'Pedra'){
+    escolhaJogador.innerText = "Jogador: Pedra"
+    }
+    if (escolha === 'Papel'){
+    escolhaJogador.innerText = "Jogador: Papel"
+    }
+    if (escolha === 'Tesoura'){
+    escolhaJogador.innerText = "Jogador: Tesoura"
+    } 
+}
+
+//function
+
+
+
 
 
 escolhaPedra.addEventListener("click",() => {
 checarResposta("Pedra")
+jogadaJogador("Pedra")
 })
 
 escolhaPapel.addEventListener("click", () => {
   checarResposta("Papel")
+  jogadaJogador("Papel")
 }) 
 
 escolhaTesoura.addEventListener("click", () => {
   checarResposta("Tesoura")
+  jogadaJogador("Tesoura")
 })
